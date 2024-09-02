@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sortable List With Drag And Drop</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+      * {
+        font-family: "Poppins";
+      }
+    </style>
+  </head>
+  <body style="display: flex; flex-direction: column">
+    <div class="alertBoxContainer"></div>
+    <h1 class="title">Sortable List By Drag And Drop</h1>
+    <div class="sortable-list">
+      <div class="box">
+        <input
+          id="valueInput"
+          class="input"
+          type="text"
+          placeholder="Add Item Text"
+        />
+        <button id="AddBtn" class="addBtn">Add Item</button>
+      </div>
+      <ul id="sortable">
+        <!-- items -->
+      </ul>
+    </div>
+    <script src="/assets/js/sortableList.js"></script>
+  </body>
+</html>

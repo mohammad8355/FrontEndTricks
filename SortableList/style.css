@@ -1,0 +1,111 @@
+.sortable-list {
+  width: 300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+ul {
+  width: 100%;
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 2px solid #fff;
+  padding: 10px;
+  color: #fff;
+  margin: 5px 0;
+  border-radius: 0.5em;
+  cursor: grab;
+  display: flex;
+  justify-content: space-between;
+}
+li.active {
+  background-color: rgb(255, 0, 89);
+}
+li:hover .DeleteBtn {
+  display: inline-block;
+}
+.DeleteBtn {
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 2em;
+  height: 2em;
+  display: none;
+}
+.title {
+  color: #fff;
+}
+.addBtn {
+  width: 100%;
+  cursor: pointer;
+  height: 3em;
+  background-color: rgb(255, 0, 89);
+  border: none;
+  outline: none;
+  border-radius: 0.5em;
+  color: #fff;
+}
+.input {
+  outline: none;
+  border: none;
+  border-radius: 0.5em;
+  background-color: #d7d7d7;
+  width: 100%;
+  height: 3em;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 0.5em;
+  width: 100%;
+}
+.alertBox {
+  position: relative;
+  border-radius: 0.5em;
+  overflow: hidden;
+  padding: 0.5em;
+  color: #fff;
+}
+.alertBox::before {
+  width: 0%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  animation: alertAnimation 3s 1 ease-in-out;
+}
+.alertBox.success {
+  background-color: rgb(0, 226, 0, 0.3);
+}
+.alertBox.danger {
+  background-color: rgb(226, 0, 45, 0.3);
+}
+.alertBox.danger::before {
+  background-color: rgb(226, 0, 45);
+}
+
+.alertBox.success::before {
+  background-color: rgb(0, 226, 0);
+}
+@keyframes alertAnimation {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.alertBoxContainer {
+  height: 100px;
+}
